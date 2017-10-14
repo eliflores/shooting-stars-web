@@ -53,14 +53,24 @@ $(document).ready(function () {
 
         $.ajax({
             url: ourApi,
-            method: 'GET'
-        }).then(function (data) {
-            console.log(data);
+            data: {
+                format: 'json'
+            },
+            error: function(xhr, status, error) {
+               alert("error" + error);
+            },
+            dataType: 'json',
+            success: function(data) {
+                var $title = $('<h1>').text(data.talks[0].talk_title);
+                var $description = $('<p>').text(data.talks[0].talk_description);
+                $('#info')
+                    .append($title)
+                    .append($description);
+            },
+            type: 'GET'
         });
 
-        return true
-
-
+        return true;
     };
 
     // sticky header
