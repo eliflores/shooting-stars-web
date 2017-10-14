@@ -1,8 +1,9 @@
 # shooting-stars-web
 
-#How to run me! 
+# How to set me up! 
 
-1. `npm install express --save`
+1. `npm install`
 
 # How to start the server: 
-`node app/server.js`
+1. `node app/server.js`
+2. `http://localhost:3000/`
