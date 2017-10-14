@@ -1,0 +1,25 @@
+{
+  "name": "shooting-stars-web",
+  "version": "1.0.0",
+  "description": "blah",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mignonnesaurus/shooting-stars-web.git"
+  },
+  "keywords": [
+    "stars"
+  ],
+  "author": "us",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mignonnesaurus/shooting-stars-web/issues"
+  },
+  "homepage": "https://github.com/mignonnesaurus/shooting-stars-web#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
