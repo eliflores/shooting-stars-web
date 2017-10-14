@@ -1,0 +1,194 @@
+/*!
+ * Made with Bootstrap!
+ */
+
+html, body {
+    margin: 0;
+	height: 100%;
+	font-family: 'Open Sans Condensed', sans-serif;
+	overflow:visible;
+	background: #505F90;
+	color: #4A4A4A;
+
+}
+
+.intro {
+    background: url('../images/arto-marttinen-196643.jpg') no-repeat center center scroll;
+  height: 100%;
+  background-color: #000;
+}
+
+h2 {
+	font-size: 25px;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+@media (min-width: 768px) {  
+  h2 {
+  font-size: 32px;
+}
+}
+ 
+
+.navbar-expand>.container {
+  width: 54%;
+}
+
+
+.mypar {
+	
+	font-family: 'Vollkorn', serif;
+	letter-spacing: 0.5px;
+	font-size: 12px;
+  line-height: 16px;
+}
+
+@media (min-width: 768px) {  
+  .mypar {
+	font-size: 16px;
+  line-height: 26px;
+}
+}
+
+
+.navbar {
+	font-size: 15px;
+    position: fixed;
+
+    width: 100%;
+
+  left: 0;
+  z-index: 1;
+
+}
+
+@media (min-width: 768px) {  
+  .navbar {
+	font-size: 20px;
+}
+}
+
+.sticky {
+	background-color: #ececec;
+	
+}
+
+
+a:link, a:visited, a:active {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  color: #959595;
+}
+
+/* mouse over link */
+a:hover {
+    color: #333333;
+}
+
+
+
+
+
+.container-fluid {
+	height: 100%;
+	padding: 0;
+	
+}
+
+
+section {
+	height: 100%; /* need this to fill one section part*/
+	width: 100%;
+	margin-bottom: 50px;
+	background: #CCFBFE;
+}
+
+
+.white {
+	width: 100%;
+	height: 30%;
+	background: #CCFBFE;
+	margin:0px auto;
+	padding: 100px 50px 0px 0px;
+	
+	
+}
+
+@media (min-width: 768px) {  
+  .white  {
+	padding: 100px 50px 0px 5px;
+  width: 60%;
+}
+}
+
+.icon  {
+    opacity: 0.5;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    width: 20px;
+    height: 20px;
+
+}
+
+@media (min-width: 768px) {  
+  .icon   {
+    width: 40px;
+    height: 40px;
+}
+}
+
+.icon:hover  {
+    opacity: 0.8;
+}
+
+@media (min-width: 768px) {  
+  .icondiv   {
+  top: 50%;
+}
+}
+
+
+
+
+.grey {
+	width: 100%;
+	bottom: 0;
+	margin:0px auto;
+	height: 70%;
+	background: #CCFBFE;
+	padding: 100px 50px 0px 0px;
+}
+
+@media (min-width: 768px) {  
+  .grey  {
+	padding: 100px 50px 0px 5px;
+  width: 60%;
+}
+}
+
+
+
+
+	
+.arrow-down {
+  display: inline-block;
+  position: absolute;
+  z-index: 10;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 2rem;
+  height: auto;
+  cursor: pointer;
+	
+
+}
+.svg-stroke {
+  fill: none;
+  stroke: #474747;
+}
+
+

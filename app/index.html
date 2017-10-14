@@ -1,21 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Sample Site</title>
-
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <style>
-        body { padding-top:50px; }
-    </style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>shower stars</title>
+	<!-- Bootstrap core CSS -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<link href="css/star.css" rel="stylesheet">
+	<!-- Custom fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Oscompwald|Vollkorn" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<script src="vendor/popper/popper.js"></script>
 </head>
 <body>
+	<div class="container-fluid">
+		<div class="col-md-12">
+			<nav class="navbar navbar-expand">
+				<div class="container">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="#section-one">home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#section-two">newsletter</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#section-three">make a wish!</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<section id="section-one">
+			<div class="row white intro">
 
-    <div class="container">
-        <div class="jumbotron">
-            <h1>res.sendFile() Works!</h1>
-        </div>
-    </div>
+			</div>
+			<div class="row grey">
+				<div class="col-md-6">
+					<h1>Find your shooting star!</h1>
+					<h2>WHEN do you want to watch star showers?</h2>
+					<form id="myForm">
+						<div class="form-group">
+							<p>Date: <input name="date" type="text" id="datepicker"></p>
+						</div>
+					</div>
+					<div class="col-md-6">
 
-</body>
-</html>
+						<h2>WHERE do you want to watch star showers?</h2>
+						<div lass="form-group" id="us3" style="width: 100%; height: 200px;"></div>
+
+
+
+					</div>
+					<div class="col-md-12">
+						<center><button onclick="event.preventDefault(); return beforeSubmit();" class="btn btn-primary">Submit</button></center>
+					</form>
+					<br><br>
+
+
+				</div>
+				<div class="col-md-12">
+					<a href="#section-two" class="arrow-down">
+						<svg viewBox="0 4.9 70 35" style="enable-background: new 0 4.9 70 35;">
+							<polyline class="svg-stroke " points="59.7,9.8 35,34.5 10.3,9.8"/>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</section>
+		<!-- section -->
+		<section id="section-two">	
+			<div class="row white">
+				<div class="col-md-12">
+					<h2>Heading</h2>
+					<p class="mypar">blbla</p>
+				</div>
+			</div>
+			<div class="row grey">
+				<div class="col-md-12">
+					<a href="#section-three" class="arrow-down">
+						<svg viewBox="0 4.9 70 35" style="enable-background: new 0 4.9 70 35;">
+							<polyline class="svg-stroke " points="59.7,9.8 35,34.5 10.3,9.8"/>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</section>	
+		<section id="section-three">	
+			<div class="row white">
+				<div class="col-md-12">
+					<h2>Heading</h2>
+					<p class="mypar">blbla</p>
+				</div>
+			</div>
+			<div class="row grey">
+			</div>
+		</section>	
+		<!-- Footer -->
+		<footer class="py-5 bg-dark">
+			<div class="container">
+				<p class="m-0 text-center text-white">&copy; © 2017 All rights reserved.</p>
+			</div>
+			<!-- /.container -->
+		</footer>
+	</div>
+	<!-- Bootstrap core JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src='http://maps.google.com/maps/api/js?libraries=places&key=AIzaSyCdqOEEhH4ou56SqkVd3nMc_puNODkD4ds'></script>
+	<script src="js/locationpicker.jquery.js"></script>
+
+	<!--  <script src="http://malsup.github.com/jquery.form.js"></script> -->
+
+	<script type="text/javascript">
+
+		$(document).ready(function() {
+
+
+
+			$("#datepicker").datepicker({
+				dateFormat: 'yy-mm-dd'
+			});
+
+	
+
+
+
+			var loc = $('#us3').locationpicker({
+
+				onchanged: function(currentLocation, radius, isMarkerDropped) {
+					console.log("Location changed. New location (" + currentLocation.latitude + ", " + currentLocation.longitude + ")");
+				} 
+
+
+			});
+
+			beforeSubmit = function(){
+
+
+
+            var datum = ($('#myForm').serialize()) //this produces: "foo=1&bar=xxx&this=hi"
+            console.log(datum)
+            console.log(loc.locationpicker.defaults.location.latitude)
+            console.log(loc.locationpicker.defaults.location.longitude)
+
+            requestString = "options?" + "lat=" + loc.locationpicker.defaults.location.latitude + "&long=" + loc.locationpicker.defaults.location.longitude + datum
+            console.log(requestString)
+
+            var root = 'https://jsonplaceholder.typicode.com';
+
+            var ourApi = 'http://localhost:8080/options?lat=40.7143528&long=-74.0059731&date=2017-12-05';
+
+$.ajax({
+  url: ourApi,
+  method: 'GET'
+}).then(function(data) {
+  console.log(data);
+});
+
+return true
+
+
+        }        
+        //$("#formid").submit();            
+    
+
+
+
+
+           /*     $( "myForm" ).on( "submit", function( event ) {
+ 				 event.preventDefault();
+ 				 console.log( $( this ).serialize() );
+ 				});*/
+
+
+               // var finalData = datum + currentLocation.latitude;
+               // console.log(finalData);
+
+                // bind 'myForm' and provide a simple callback function 
+                // bind 'myForm' and provide a simple callback function 
+                //   $('#myForm').ajaxForm(function() { 
+                //var root = 'https://jsonplaceholder.typicode.com';
+
+                
+                
+
+
+
+
+                //   }); 
+
+
+
+                // sticky header
+
+                $(window).bind('scroll', function() {
+                	var navHeight = $(window).height() - 70;
+                	if ($(window).scrollTop() > navHeight) {
+                		$('nav').addClass('sticky');
+                	} else {
+                		$('nav').removeClass('sticky');
+                	}
+                });
+            });
+
+
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                    	scrollTop: $(hash).offset().top
+                    }, 800, function() {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+
+            });
+
+
+
+
+
+        </script>
+    </body>
+    </html>
