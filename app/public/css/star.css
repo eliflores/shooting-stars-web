@@ -7,15 +7,17 @@ html, body {
 	height: 100%;
 	font-family: 'Open Sans Condensed', sans-serif;
 	overflow:visible;
-	background: #505F90;
+	background: url('../images/arto-marttinen-196643.jpg') no-repeat center center scroll !important;
 	color: #4A4A4A;
 
 }
 
+#map { height: 250px; }
+
 .intro {
-    background: url('../images/arto-marttinen-196643.jpg') no-repeat center center scroll;
+    
   height: 100%;
-  background-color: #000;
+  background-color: #000; 
 }
 
 h2 {
@@ -31,13 +33,12 @@ h2 {
  
 
 .navbar-expand>.container {
-  width: 54%;
+  width: 70%;
 }
 
 
 .mypar {
 	
-	font-family: 'Vollkorn', serif;
 	letter-spacing: 0.5px;
 	font-size: 12px;
   line-height: 16px;
@@ -118,7 +119,7 @@ section {
 @media (min-width: 768px) {  
   .white  {
 	padding: 100px 50px 0px 5px;
-  width: 60%;
+  width: 80%;
 }
 }
 
@@ -163,7 +164,7 @@ section {
 @media (min-width: 768px) {  
   .grey  {
 	padding: 100px 50px 0px 5px;
-  width: 60%;
+  width: 80%;
 }
 }
 
