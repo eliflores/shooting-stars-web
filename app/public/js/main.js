@@ -15,7 +15,7 @@ $(document).ready(function () {
         popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
     });
 
-    var map = L.map('map').setView([11.206051, 122.447886], 8);
+    var map = L.map('map').setView([52.5200, 13.4050], 5);
     mapLink =
         '<a href="http://openstreetmap.org">OpenStreetMap</a>';
     L.tileLayer(
