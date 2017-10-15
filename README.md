@@ -7,3 +7,10 @@
 # How to start the server: 
 1. `node app/server.js`
 2. `http://localhost:3000/`
+
+# Useful libraries
+
+1. [Bootstrap](http://getbootstrap.com/)
+2. [jQuery](https://jquery.com/)
+3. [Leaflet](http://leafletjs.com/) Library  with [OpenStreetMap](https://www.openstreetmap.org/)
+4. [GoogleFonts](https://fonts.google.com/)
