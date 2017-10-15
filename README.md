@@ -1,12 +1,13 @@
-# shooting-stars-web
+# Shooting Stars
 
-# How to set me up! 
+# How to set up the project
 
-1. `npm install`
+1. Clone the repository
+2. Run `npm install`
 
 # How to start the node server
 1. `node app/server.js`
-2. `http://localhost:3000/`
+2. Go to: `http://localhost:3000/`
 
 # Useful libraries
 
