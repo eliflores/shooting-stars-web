@@ -4,7 +4,7 @@
 
 1. `npm install`
 
-# How to start the server: 
+# How to start the node server
 1. `node app/server.js`
 2. `http://localhost:3000/`
 
@@ -14,3 +14,4 @@
 2. [jQuery](https://jquery.com/)
 3. [Leaflet](http://leafletjs.com/) Library  with [OpenStreetMap](https://www.openstreetmap.org/)
 4. [GoogleFonts](https://fonts.google.com/)
+4. [Node.js](https://nodejs.org)
