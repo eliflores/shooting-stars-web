@@ -1,15 +1,15 @@
 # Shooting Stars
 
-# How to set up the project
+## How to set up the project
 
 1. Clone the repository
 2. Run `npm install`
 
-# How to start the node server
+## How to start the node server
 1. `node app/server.js`
 2. Go to: `http://localhost:3000/`
 
-# Useful libraries
+## Useful libraries
 
 1. [Bootstrap](http://getbootstrap.com/)
 2. [jQuery](https://jquery.com/)
