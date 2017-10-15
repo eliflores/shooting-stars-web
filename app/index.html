@@ -11,7 +11,7 @@
     <!-- Custom styles for this template -->
     <link href="css/star.css" rel="stylesheet">
     <!-- Custom fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Oscompwald|Vollkorn" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <script src="vendor/popper/popper.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"/>
@@ -28,7 +28,9 @@
     <div class="col-md-12">
         <nav class="navbar navbar-expand">
             <div class="container">
-                <ul class="navbar-nav ml-auto">
+             <h1>Find your shooting star!</h1>
+                <!-- <ul class="navbar-nav ml-auto">
+
                     <li class="nav-item">
                         <a class="nav-link" href="#section-one">home</a>
                     </li>
@@ -38,72 +40,38 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#section-three">make a wish!</a>
                     </li>
-                </ul>
+                </ul> -->
             </div>
         </nav>
     </div>
     <section id="section-one">
         <div class="row grey">
-            <div class="col-md-6">
-                <h1>Find your shooting star!</h1>
-                <h2>WHEN do you want to watch star showers?</h2>
+            <div class="col-md-4">
+           
+                <h2><b>When</b> do you want to watch star showers?</h2>
                 <form id="myForm">
                     <div class="form-group">
-                        <p>Date: <input name="date" type="text" id="datepicker" required></p>
+                        <p><input name="date" value="2017-12-01" type="text" id="datepicker" required></p>
                     </div>
             </div>
-            <div class="col-md-6">
-                <h2>WHERE do you want to watch star showers?</h2>
+            <div class="col-md-8">
+                          <h2><b>Where</b> do you want to watch star showers?</h2>
                 <div id="map"></div>
             </div>
             <div class="col-md-12">
                 <center>
-                    <button onclick="event.preventDefault(); return beforeSubmit();" class="btn btn-primary">Submit
+                <br><br>
+                    <button onclick="event.preventDefault(); return beforeSubmit();" class="myButton">Find my shooting star!
                     </button>
                 </center>
                 </form>
             </div>
-            <div class="col-md-12">
-                <a href="#section-two" class="arrow-down">
-                    <svg viewBox="0 4.9 70 35" style="enable-background: new 0 4.9 70 35;">
-                        <polyline class="svg-stroke " points="59.7,9.8 35,34.5 10.3,9.8"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </section>
-    <!-- section -->
-    <section id="section-two">
-        <div class="row white">
-            <div class="col-md-12">
-                <h2>Heading</h2>
-                <p class="mypar">blbla</p>
-            </div>
-        </div>
-        <div class="row grey">
-            <div class="col-md-12">
-                <a href="#section-three" class="arrow-down">
-                    <svg viewBox="0 4.9 70 35" style="enable-background: new 0 4.9 70 35;">
-                        <polyline class="svg-stroke " points="59.7,9.8 35,34.5 10.3,9.8"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section id="section-three">
-        <div class="row white">
-            <div class="col-md-12">
-                <h2>Heading</h2>
-                <p class="mypar">blbla</p>
-            </div>
-        </div>
-        <div class="row grey">
         </div>
     </section>
     <!-- Footer -->
     <footer class="py-5 bg-dark">
         <div class="container">
-            <p class="m-0 text-center text-white">&copy; © 2017 All rights reserved.</p>
+            <p class="m-0 text-center text-white">&copy; Hack like a girl!</p>
         </div>
         <!-- /.container -->
     </footer>
